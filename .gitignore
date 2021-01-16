@@ -1,4 +1,6 @@
-.idea
+.idea/
+오답 풀이/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
