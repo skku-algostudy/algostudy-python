@@ -21,13 +21,9 @@
 
 n = int(input())
 signs = list(input().split())
-numbers = [num for num in range(9, 0, -1)]
-max_num, min_num = 0, 0
-start_cursor = 0
+numbers = [num for num in range(9)]
+max_num, min_num = [], []
+cursor = 0
 
-for sign in signs:
-
-    if sign == '<':
-      # (풀이)
-    else:
-      # (풀이)
+while n:
+  # 적절한 솔루션이 생각이 나지 않네요...
