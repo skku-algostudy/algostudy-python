@@ -65,6 +65,8 @@ def solution(people, limit):
 
     while(l_cursor <= r_cursor):
 
+        # -- 중복되는 부분은 제거 good, 하지만 처음부터 효율적으로 짜려고 하기 보다는 일단 작성 후
+
         # 최소 + 최대 더했을때 초과된다면 r_cursor만 이동
         if people[r_cursor] + people[l_cursor] > limit:
             move_count += 1

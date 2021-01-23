@@ -49,7 +49,7 @@
 # 입력값들
 words = []
 n = int(input())
-for i in range(n):
+for _ in range(n):
     words.append(input())
 
 
@@ -63,11 +63,15 @@ def solution(n, words):
         exp = 0
         while word:
             alphabet = word[-1]
+            # ** > pow()
             alphabet_priority[ord(alphabet) - ord('A')] += pow(10, exp)
+
             exp += 1
+            # 슬라이싱 or index ?
             word = word[:-1]
 
     alphabet_priority.sort(reverse=True)
+
     for i in range(9, 0, -1):
         word_sum += i * alphabet_priority[9 - i]
 
