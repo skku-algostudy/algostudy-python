@@ -10,6 +10,10 @@ dist : 친구가 갈 수 있는
 *** 신경쓸 조건 ***
 한번 출발하면 방향 못바꿈.
 원형 : 끝점까지 가도 처음으로 되돌아오는거랑 또이또이 -> 2배를 늘리는 아이디어.
+
+for문 중첩이 3개나 ?! -> 정리를 잘 하고 들어가야겠다.
+중간중간 큼지막한 경우의 수를 생각하는 것이 팁. 블로그처럼 (https://yabmoons.tistory.com/552)
+문제를 풀기 전 이 부분에 적는 주석을 좀 더 늘려야겠다.
 '''
 
 from itertools import permutations # 순열은 permutations 조합은 combinations
@@ -23,7 +27,7 @@ def solution(n, weak, dist):
     for start in range(weak_n): # 인덱스는 시작점!! 두 배로 늘렸으므로 시작점은 1시 방향이 될수도 11시방향이 될수도 있다.
         friends_cases = list(permutations(dist, len(dist))) # 친구의 조합
         for friends in friends_cases: # 각 (순서의) 경우마다
-            count = 1
+            count = 1 # 친구 몇 명 쓰였는지
             position = weak[start] + friends[count-1] # 일단 한 친구로 땜빵
             for index in range(start, start+weak_n): # 그러면 땜빵시작점 ~ 땜빵끝점까지
                 if position < weak[index]: # 그 다음 친구로 땜빵해야 하면 땜빵
