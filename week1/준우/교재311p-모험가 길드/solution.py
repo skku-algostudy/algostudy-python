@@ -15,5 +15,3 @@ for p in people:
         in_this_group = 0 # 그룹원 초기화
 
 print(group_n)
-        
-

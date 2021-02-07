@@ -135,7 +135,7 @@ def get_room_after_second():
         room[machine_r+1][c] = room[machine_r+1][c-1]
 
     room[machine_r+1][1] = 0
-    pretty_print('4번순환', room)
+    # pretty_print('4번순환', room)
 
 def get_total_dust():
     # pretty_print('결과', room)
@@ -165,5 +165,6 @@ machine_r -= 1
 
 for _ in range(T):
     get_room_after_second()
+    pretty_print(_, room)
 
 print(get_total_dust())
