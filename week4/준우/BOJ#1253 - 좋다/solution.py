@@ -14,3 +14,5 @@ for i in range(n):
             l += 1
         else:
             r -= 1
+
+print(answer)
