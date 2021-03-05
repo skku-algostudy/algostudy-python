@@ -14,7 +14,7 @@ def solution(n, times):
         temp = n
         for time in times:
             temp -= mid//time
-            if temp <= 0:  # 심사대를 모두 이용하지 않았는데 모든 사람이 심사를 받는 경우 왼쪽으로 범위를 줄인다.
+            if temp <= 0:
                 answer = mid
                 right = mid - 1
                 break
